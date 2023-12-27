@@ -173,7 +173,7 @@ onMounted(() => {
 
     .login-right-warp {
       border: 1px solid var(--el-color-primary-light-3); //表单边框
-      border-radius: 3px;
+      border-radius: 20px;
       width: 100%;
       //height: 500px; //表单高度
       position: relative;
@@ -184,7 +184,6 @@ onMounted(() => {
         display: flex;
         flex-direction: column;
         height: 100%;
-        border-radius: 10px;
 
         .login-right-warp-main-title {
           height: 80px;
