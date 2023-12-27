@@ -14,7 +14,7 @@ COPY server/AirGo-$TARGETOS-$TARGETARCH /air/AirGo
 
 ENV LANG C.UTF-8
 
-EXPOSE 80 443
+# EXPOSE 80 443
 
 CMD ["/air/AirGo", "-start"]
 
