@@ -5,7 +5,7 @@
         <el-link>v old-version</el-link>
         <span> | </span>
         <!-- <el-link href="https://github.com/ppoonk/AirGo">© AirGo</el-link> -->
-        <span> | </span>
+        <!-- <span> | </span> -->
         <el-link >{{ themeConfig.globalTitle }}</el-link>
       </div>
     </div>

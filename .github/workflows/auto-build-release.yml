@@ -96,7 +96,7 @@ jobs:
           platforms: linux/arm,linux/arm64,linux/amd64
           push: true
           tags: |
-            ppoiuty/airgo:${{ steps.get_version.outputs.VERSION }}
-            ppoiuty/airgo:latest
+            hhhflow/airgo:${{ steps.get_version.outputs.VERSION }}
+            hhhflow/airgo:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
