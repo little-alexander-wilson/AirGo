@@ -2,7 +2,8 @@ name: Auto build docker
 on:
   release:
     types: [created]
-
+  workflow_dispatch:
+  
 permissions:
   contents: write
   packages: write
