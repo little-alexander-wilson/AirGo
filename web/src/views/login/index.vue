@@ -35,11 +35,11 @@
                 </el-tab-pane>
               </el-tabs>
             </div>
-            <Scan v-if="state.isScan"/>
+            <!-- <Scan v-if="state.isScan"/>
             <div class="login-content-main-sacn" @click="state.isScan = !state.isScan">
               <i class="iconfont" :class="state.isScan ? 'icon-diannao1' : 'icon-barcode-qr'"></i>
               <div class="login-content-main-sacn-delta"></div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -173,7 +173,7 @@ onMounted(() => {
 
     .login-right-warp {
       border: 1px solid var(--el-color-primary-light-3); //表单边框
-      border-radius: 3px;
+      border-radius: 20px;
       width: 100%;
       //height: 500px; //表单高度
       position: relative;
