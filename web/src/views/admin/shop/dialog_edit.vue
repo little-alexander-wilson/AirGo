@@ -69,6 +69,17 @@
             <span class="text-gray-500">天</span>
           </el-col>
         </el-form-item>
+        <el-form-item label="客户端连接数">
+          <el-col :span="4">
+            <el-input-number v-model.number="goodsManageData.currentGoods.node_connector" type="number"/>
+          </el-col>
+          <el-col :span="2" style="text-align: center">
+            <span>-</span>
+          </el-col>
+          <el-col :span="18">
+            <span class="text-gray-500">个</span>
+          </el-col>
+        </el-form-item>
         <el-form-item label="流量重置日">
           <el-col :span="4">
             <el-input-number v-model.number="goodsManageData.currentGoods.reset_day" type="number"/>
