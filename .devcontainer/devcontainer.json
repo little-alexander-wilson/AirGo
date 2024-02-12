@@ -1,0 +1,7 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/vue-cli:2": {},
+    "ghcr.io/guiyomh/features/golangci-lint:0": {}
+  },
+}
