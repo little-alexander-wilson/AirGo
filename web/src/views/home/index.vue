@@ -2,7 +2,7 @@
   <div>
     <el-row :gutter="10" class="home-card-two mb15">
       <!--      套餐详情-->
-      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+      <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
         <div class="home-card-item">
           <el-card class="box-card" style="height: 300px">
             <template #header>
@@ -39,7 +39,7 @@
         </div>
       </el-col>
       <!--      流量统计-->
-      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+      <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
         <div class="home-card-item">
           <el-card class="box-card" style="height: 150px">
             <el-radio-group v-model="state.tabValue" @change="getUserTraffic" style="margin-bottom: 30px">
@@ -81,7 +81,7 @@
         </div>
       </el-col>
       <!--      订阅连接-->
-      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+      <el-col :xs="24" :sm="24" :md="4" :lg="4" :xl="4">
         <div class="home-card-item">
           <el-card class="box-card" style="height: 300px">
             <template #header>
@@ -93,19 +93,19 @@
             </template>
             <div style="text-align: center">
               <div>
-                <el-button size="large" color="blue" style="margin-top: 10px;margin-bottom: 10px;width: 100%"
+                <el-button size="large" class="manual-subscribe-items"
                            @click="Sub('')">
                   复制通用订阅
                 </el-button>
               </div>
               <div>
-                <el-button size="large" color="deeppink" style="margin-top: 10px;margin-bottom: 10px;width: 100%"
+                <el-button size="large" class="manual-subscribe-items"
                            @click="QRSub()">
                   二维码订阅
                 </el-button>
               </div>
               <div>
-                <el-button size="large" color="brown" style="margin-top: 10px;margin-bottom: 10px;width: 100%"
+                <el-button size="large" class="manual-subscribe-items"
                            @click="state.isShowSubDialog=true">
                   手动选择订阅
                 </el-button>
@@ -126,54 +126,54 @@
         </div>
       </el-col>
     </el-row>
-    <el-dialog v-model="state.isShowDialog" :title="state.title" width="80%" destroy-on-close center>
+    <el-dialog v-model="state.isShowDialog" :title="state.title" width="30%" destroy-on-close center>
       <v-md-preview :text="articleStoreData.articleID2.value.content"></v-md-preview>
     </el-dialog>
-    <el-dialog v-model="state.isShowSubDialog">
+    <el-dialog v-model="state.isShowSubDialog" width="20%">
       <div>
-        <el-button size="large" color="blue" style="margin-top: 10px;margin-bottom: 10px;width: 100%"
-                   @click="Sub('NekoBox')">
-          NekoBox 订阅
-        </el-button>
-      </div>
-      <div>
-        <el-button size="large" color="blue" style="margin-top: 10px;margin-bottom: 10px;width: 100%"
-                   @click="Sub('v2rayNG')">
-          v2rayNG 订阅
-        </el-button>
-      </div>
-      <div>
-        <el-button size="large" color="blue" style="margin-top: 10px;margin-bottom: 10px;width: 100%"
-                   @click="Sub('v2rayN')">
-          v2rayN 订阅
-        </el-button>
-      </div>
-      <div>
-        <el-button size="large" color="blue" style="margin-top: 10px;margin-bottom: 10px;width: 100%"
-                   @click="Sub('Clash')">
-          Clash 订阅
-        </el-button>
-      </div>
-      <div>
-        <el-button size="large" color="blue" style="margin-top: 10px;margin-bottom: 10px;width: 100%"
+        <el-button size="large" class="manual-subscribe-items"
                    @click="Sub('Shadowrocket')">
           Shadowrocket 订阅
         </el-button>
       </div>
       <div>
-        <el-button size="large" color="blue" style="margin-top: 10px;margin-bottom: 10px;width: 100%"
+        <el-button size="large" class="manual-subscribe-items"
+                   @click="Sub('NekoBox')">
+          NekoBox 订阅
+        </el-button>
+      </div>
+      <div>
+        <el-button size="large" class="manual-subscribe-items"
+                   @click="Sub('v2rayNG')">
+          v2rayNG 订阅
+        </el-button>
+      </div>
+      <div>
+        <el-button size="large" class="manual-subscribe-items"
+                   @click="Sub('v2rayN')">
+          v2rayN 订阅
+        </el-button>
+      </div>
+      <div>
+        <el-button size="large" class="manual-subscribe-items"
+                   @click="Sub('Clash')">
+          Clash 订阅
+        </el-button>
+      </div>
+      <div>
+        <el-button size="large" class="manual-subscribe-items"
                    @click="Sub('Surge')">
           Surge 订阅
         </el-button>
       </div>
       <div>
-        <el-button size="large" color="blue" style="margin-top: 10px;margin-bottom: 10px;width: 100%"
+        <el-button size="large" class="manual-subscribe-items"
                    @click="Sub('Quantumult')">
           Quantumult 订阅
         </el-button>
       </div>
       <div>
-        <el-button size="large" color="blue" style="margin-top: 10px;margin-bottom: 10px;width: 100%"
+        <el-button size="large" class="manual-subscribe-items"
                    @click="Sub('V2rayU')">
           V2rayU 订阅
         </el-button>
@@ -326,7 +326,7 @@ const onInitQrcode = () => {
     text: userStore.subUrl,
     width: 300,
     height: 300,
-    colorDark: '#0a55f8',
+    colorDark: '#4ECCA3',
     colorLight: 'rgb(255,255,255)',
   });
 }
@@ -419,5 +419,14 @@ onMounted(() => {
 .card-header-left {
   font-size: 15px;
   color: #AC96F1;
+}
+
+.manual-subscribe-items {
+  margin-top: 10px;
+  margin-bottom: 10px; 
+  width: 100%; 
+  background: #4ECCA3; 
+  color: #EEEEEE;
+  font-weight: bold;
 }
 </style>

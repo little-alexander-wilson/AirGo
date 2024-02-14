@@ -1,37 +1,10 @@
 <template>
   <div class="personal layout-pd">
     <el-row>
-      <!-- 个人信息 -->
-      <el-col :xs="24" :sm="24">
-        <el-card shadow="hover" header="个人信息">
-          <div class="personal-user">
-            <div class="personal-user-left">
-              <el-upload class="h400 personal-user-left-upload" accept=".bmg,.png,.jpg"
-                         action="https://jsonplaceholder.typicode.com/posts/" multiple :limit="1">
-                <img :src="userInfos.avatar"/>
-              </el-upload>
-            </div>
-            <div class="personal-user-right">
-              <el-row>
-                <el-col :span="24" class="personal-title mb18">{{ currentTime }}</el-col>
-                <el-col :span="24">
-                  <el-row>
-                    <el-col :xs="24" :sm="24" class="personal-item mb6">
-                      <div class="personal-item-label">昵称：</div>
-                      <span>{{ userInfos.nick_name }}</span>
-                    </el-col>
-                  </el-row>
-                </el-col>
-              </el-row>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-
+      
       <!-- 更新信息 -->
-      <el-col :span="24">
+      <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
         <el-card shadow="hover" class="mt15 personal-edit" header="个人信息">
-          <div class="personal-edit-title">基本信息</div>
           <div class="personal-edit-safe-box">
             <div class="personal-edit-safe-item">
               <div class="personal-edit-safe-item-left">
@@ -43,19 +16,8 @@
               </div>
             </div>
           </div>
-          <div class="personal-edit-title">免流混淆：{{userInfos.subscribe_info.host}}</div>
-          <div class="personal-edit-safe-box">
-            <div class="personal-edit-safe-item">
-              <div class="personal-edit-safe-item-left">
-                <el-input class="personal-edit-safe-item-left-label" v-model="state.host.host" style="width: 90%"></el-input>
-              </div>
-              <div class="personal-edit-safe-item-right">
-                <el-button type="primary" @click="onChangeHost">立即修改</el-button>
-              </div>
-            </div>
-          </div>
           <div class="personal-edit-title">
-            我的邀请（佣金率：{{ serverConfig.publicServerConfig.value.rebate_rate * 100 }}%）
+            我的邀请(佣金率：{{ serverConfig.publicServerConfig.value.rebate_rate * 100 }}%)
           </div>
           <div class="personal-edit-safe-box">
             <div class="personal-edit-safe-item">
@@ -77,19 +39,6 @@
               </div>
             </div>
           </div>
-          <div class="personal-edit-title">
-            打卡
-          </div>
-          <div class="personal-edit-safe-box">
-            <div class="personal-edit-safe-item">
-              <div class="personal-edit-safe-item-left">
-                <div class="personal-edit-safe-item-left-value">
-                  <el-button type="primary" @click="clockin()">立即打卡</el-button>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </el-card>
       </el-col>
     </el-row>
