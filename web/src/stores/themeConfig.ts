@@ -18,7 +18,7 @@ export const useThemeConfig = defineStore('themeStore', {
              * 全局主题
              */
             // 默认 primary 主题颜色
-            primary: '#F9A43D',
+            primary: '#4ECCA3',
             // 是否开启深色模式
             isIsDark: false,
 
@@ -28,7 +28,7 @@ export const useThemeConfig = defineStore('themeStore', {
             // 默认顶栏导航背景颜色
             topBar: '#ffffff',
             // 默认顶栏导航字体颜色
-            topBarColor: '#606266',
+            topBarColor: '#232931',
             // 是否开启顶栏背景颜色渐变
             isTopBarColorGradual: false,
 
@@ -36,9 +36,9 @@ export const useThemeConfig = defineStore('themeStore', {
              * 菜单设置
              */
             // 默认菜单导航背景颜色
-            menuBar: '#565656',
+            menuBar: '#ffffff',
             // 默认菜单导航字体颜色
-            menuBarColor: '#eaeaea',
+            menuBarColor: '#232931',
             // 默认菜单高亮背景色
             menuBarActiveColor: 'rgba(0, 0, 0, 0.2)',
             // 是否开启菜单背景颜色渐变
@@ -48,9 +48,9 @@ export const useThemeConfig = defineStore('themeStore', {
              * 分栏设置
              */
             // 默认分栏菜单背景颜色
-            columnsMenuBar: '#545c64',
+            columnsMenuBar: '#ffffff',
             // 默认分栏菜单字体颜色
-            columnsMenuBarColor: '#e6e6e6',
+            columnsMenuBarColor: '#232931',
             // 是否开启分栏菜单背景颜色渐变
             isColumnsMenuBarColorGradual: false,
             // 是否开启分栏菜单鼠标悬停预加载(预览菜单)
@@ -147,7 +147,7 @@ export const useThemeConfig = defineStore('themeStore', {
             // 默认初始语言，可选值"<zh-cn|en|zh-tw>"，默认 zh-cn
             globalI18n: 'zh-cn',
             // 默认全局组件大小，可选值"<large|'default'|small>"，默认 'large'
-            globalComponentSize: 'large',
+            globalComponentSize: 'default',
         },
     }),
     actions: {

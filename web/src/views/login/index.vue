@@ -9,10 +9,10 @@
         </div>
       </div>
       <!--      左侧svg-->
-      <div class="login-left-img">
+      <!-- <div class="login-left-img">
         <img :src="loginMain"/>
-      </div>
-      <img :src="loginBg" class="login-left-waves"/>
+      </div> -->
+      <!-- <img :src="loginBg" class="login-left-waves"/> -->
     </div>
     <div class="login-right flex">
       <div class="login-right-warp flex-margin">
@@ -56,8 +56,8 @@ import {storeToRefs} from 'pinia';
 
 import {useThemeConfig} from '/@/stores/themeConfig';
 import {NextLoading} from '/@/utils/loading';
-import loginMain from '/@/assets/bgc/login-main.svg';
-import loginBg from '/@/assets/bgc/login-bg.svg';
+// import loginMain from '/@/assets/bgc/login-main.svg';
+// import loginBg from '/@/assets/bgc/login-bg.svg';
 import {useRoute} from "vue-router";
 import {Local} from "/@/utils/storage";
 
@@ -110,7 +110,7 @@ onMounted(() => {
   .login-left {
     flex: 1;
     position: relative;
-    background-color: rgba(255, 165, 0, 1);
+    background-color: #ffffff;
     margin-right: 200px;
 
     .login-left-logo {

@@ -1,24 +1,24 @@
 <template>
   <div>
-    <el-dialog v-model="state.isShowSubmitOrderDialog" title="订单详情" width="80%">
+    <el-dialog v-model="state.isShowSubmitOrderDialog" title="订单详情" width="40%">
       <div class="home-card-item">
-        <div class="card-text">
+        <!-- <div class="card-text">
           <el-button class="card-text-left" type="warning">订购套餐</el-button>
           <el-text class="card-header-left">{{ shopData.currentGoods.subject }}</el-text>
         </div>
         <div class="card-text">
           <el-button class="card-text-left" type="warning">套餐流量</el-button>
           <span class="card-text-right">{{ shopData.currentGoods.total_bandwidth }}GB</span>
-        </div>
-        <div class="card-text">
+        </div> -->
+        <!-- <div class="card-text">
           <el-button class="card-text-left" type="warning">有效期</el-button>
           <span class="card-text-right">{{ shopData.currentGoods.expiration_date }}天</span>
-        </div>
+        </div> -->
         <div v-html="shopData.currentGoods.des"></div>
         <el-divider></el-divider>
         <div class="card-text">
           <el-input v-model="shopData.currentOrder.coupon_name" placeholder="输入折扣码"></el-input>
-          <el-button class="card-text-right" color="blue" size="default" @click="varifyCoupon">验证</el-button>
+          <el-button class="card-text-right" style="background-color: #4ECCA3; color: #EEEEEE;" @click="varifyCoupon">验证</el-button>
         </div>
         <div class="card-text">
           <el-button class="card-text-left" type="info">金额</el-button>
@@ -28,10 +28,10 @@
           <el-button class="card-text-left" type="info">优惠码折扣</el-button>
           <el-text class="card-text-right">-{{ shopData.currentOrder.coupon_amount }}</el-text>
         </div>
-        <div class="card-text">
+        <!-- <div class="card-text">
           <el-button class="card-text-left" type="info">旧套餐抵扣</el-button>
           <el-text class="card-text-right">-{{ shopData.currentOrder.deduction_amount }}</el-text>
-        </div>
+        </div> -->
         <div class="card-text">
           <el-button class="card-text-left" type="info">余额抵扣</el-button>
           <el-text class="card-text-right">-{{ shopData.currentOrder.remain_amount }}</el-text>
@@ -44,7 +44,7 @@
       <template #footer>
             <span class="dialog-footer">
                 <el-button @click="state.isShowSubmitOrderDialog = false">取消</el-button>
-                <el-button type="primary" @click="onSubmitOrder" color="#FC3D08">
+                <el-button type="primary" @click="onSubmitOrder" color="#FF2E63">
                     提交订单
                 </el-button>
             </span>
