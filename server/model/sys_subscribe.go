@@ -30,8 +30,8 @@ type ClashYaml struct {
 	Secret             string            `yaml:"secret"`
 	Proxies            []ClashProxy      `yaml:"proxies"`
 	ProxyGroups        []ClashProxyGroup `yaml:"proxy-groups"`
-	RuleProviders      RuleProviders     `yaml:"rule-providers"`
-	Rules              []string          `yaml:"rules"`
+	// RuleProviders      RuleProviders     `yaml:"rule-providers"`
+	Rules []string `yaml:"rules"`
 }
 type RuleProviders struct {
 	CN    RuleProvidersItem `yaml:"cn"`
