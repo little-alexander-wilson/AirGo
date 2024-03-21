@@ -222,21 +222,21 @@ func ClashMeta(nodes *[]model.Node) string {
 	clashYaml.Secret = ""
 	clashYaml.Proxies = proxiesArr
 	clashYaml.ProxyGroups = append(clashYaml.ProxyGroups, proxyGroup1, proxyGroup2, proxyGroup3)
-	clashYaml.RuleProviders.CN = model.RuleProvidersItem{
-		Behavior: "domain",
-		Interval: 86400,
-		Path:     "./rule-set/cn_domain.yaml",
-		Type:     "http",
-		Url:      "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/cn_domain.yaml",
-	}
+	// clashYaml.RuleProviders.CN = model.RuleProvidersItem{
+	// 	Behavior: "domain",
+	// 	Interval: 86400,
+	// 	Path:     "./rule-set/cn_domain.yaml",
+	// 	Type:     "http",
+	// 	Url:      "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/cn_domain.yaml",
+	// }
 
-	clashYaml.RuleProviders.Proxy = model.RuleProvidersItem{
-		Behavior: "domain",
-		Interval: 86400,
-		Path:     "./rule-set/proxy.yaml",
-		Type:     "http",
-		Url:      "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/proxy.yaml",
-	}
+	// clashYaml.RuleProviders.Proxy = model.RuleProvidersItem{
+	// 	Behavior: "domain",
+	// 	Interval: 86400,
+	// 	Path:     "./rule-set/proxy.yaml",
+	// 	Type:     "http",
+	// 	Url:      "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/proxy.yaml",
+	// }
 	clashYaml.Rules = []string{
 		"DOMAIN,youtubest.top,DIRECT",
 		"DOMAIN-SUFFIX,services.googleapis.cn," + global.Server.Subscribe.SubName,
