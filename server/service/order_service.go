@@ -2,10 +2,11 @@ package service
 
 import (
 	"fmt"
-	"github.com/ppoonk/AirGo/global"
-	"github.com/ppoonk/AirGo/model"
 	"strings"
 	"time"
+
+	"github.com/ppoonk/AirGo/global"
+	"github.com/ppoonk/AirGo/model"
 )
 
 // 更新数据库订单
@@ -90,6 +91,11 @@ func PaymentSuccessfullyOrderHandler(order *model.Orders) {
 		global.GoroutinePool.Submit(func() {
 			_ = UpdateOrder(order) //更新数据库订单状态
 		})
+		if global.Server.Subscribe.EnabledRebate {
+			global.GoroutinePool.Submit(func() {
+				ReferrerRebate(order.UserID, order.ReceiptAmount) //处理推荐人返利
+			})
+		}
 	case model.GoodsTypeRecharge: //充值
 		global.GoroutinePool.Submit(func() {
 			_ = RechargeHandle(order) //处理用户余额
